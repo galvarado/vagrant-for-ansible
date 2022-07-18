@@ -1,0 +1,11 @@
+---
+- hosts: '{{ target }}'
+  become: true
+  tasks:
+  # Creates an entry like 
+  # 10 0 * * sudo apt-get -y autoremove >> /home/ubuntu/apt-get-autoremove-cron.log 2>&1
+  - cron:
+      name: "remove old kernels"
+      minute: "10"
+      hour: "0"
+      job: "sudo apt-get -y autoremove >> /home/ubuntu/apt-get-autoremove-cron.log 2>&1"
