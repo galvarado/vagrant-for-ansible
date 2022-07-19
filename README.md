@@ -2,11 +2,9 @@
 
  Since Vagrant provides easy to configure, reproducible, and portable work environments, this repository helps you to create ansible playbooks in a safe environment using vagrant  where you can test ansible emulating real environments.
 
-It is ready to run ansible just by starting the environment, the repository contains a preconfigured ```inventory``` ready to work with the target host. It uses the default ```vagrant```.pub
-
+It is ready to run ansible just by starting the environment, the repository contains a preconfigured ```inventory``` ready to work with the target host. We use an Ubuntu 22.04 instance and the default ```vagrant``` user to log in.
 
 ## How to use
-
 
 ### Prerequisites
 
