@@ -1,2 +1,7 @@
+# The following inventory uses the static ip configured at Vagrantfile and
+# uses the default vagrant user. The ssh connection depends on adding a 
+#custom ssh key located at .ssh/id_rsa.pub, it will be added to vagrant VM 
+# at autorized_keys for vagrant and root user.
+
 [myhosts]
 192.168.56.10 ansible_user=vagrant
