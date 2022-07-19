@@ -57,4 +57,4 @@ ssh vagrant@192.168.56.10
 
 ### Ansible provisioner
 
-To run ansible adhoc commands the best option is use the previous approach that simulate a real environment.  But you can also use the [Ansible provisioner](https://www.vagrantup.com/docs/installation) that uses a different approach, it will run on the provisioning phase of vagrant. 
+To run ansible adhoc commands the best option is use the previous approach that simulate a real environment.  But you can also use the [Ansible provisioner](https://www.vagrantup.com/docs/installation)https://www.vagrantup.com/docs/provisioning/ansible that uses a different approach, it will run on the provisioning phase of vagrant. 
