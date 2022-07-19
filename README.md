@@ -44,7 +44,7 @@ Output:
 You will find a collection of playbooks in their directory ready to use them. The playbook target is defined as a variable. To match the current Vagrant host you need pass the target as follows:
 
 ```
- ansible-playbook -i inventory  addcronjob.yaml --extra-vars "target=myhosts" 
+ansible-playbook -i inventory  playbooks/addcronjob.yaml --extra-vars "target=myhosts" 
 ```
 
 Output:
