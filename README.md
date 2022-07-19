@@ -2,7 +2,7 @@
 
  Since Vagrant provides easy to configure, reproducible, and portable work environments, this repository helps you to create ansible playbooks in a safe environment using vagrant  where you can test ansible emulating real environments.
 
-It is ready to run ansible just by starting the environment, there is a preconfigured inventory with the myhosts group where the vagrant VM is located. The default user vagrant is used and an ssh key is copied when you start vagrant, you only need to have a key in .ssh/id_rsa.pub
+It is ready to run ansible just by starting the environment, the repository contains a preconfigured ```inventory``` ready to work with the target host. It uses the default ```vagrant```.pub
 
 
 ## How to use
@@ -10,11 +10,13 @@ It is ready to run ansible just by starting the environment, there is a preconfi
 
 ### Prerequisites
 
-Install [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtualbox](https://www.vagrantup.com/docs/providers/virtualbox).
+
+- Install [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtualbox](https://www.vagrantup.com/docs/providers/virtualbox).
+- Have an ssh key located at: ```~/.ssh/id_rsa.pub```
 
 ### Spin up the environment
 
-Start the environment:
+Start vagrant target host:
 
 ```
 $ vagrant up
@@ -65,7 +67,7 @@ PLAY RECAP *********************************************************************
 
 #### Debug
 
-Also you can ssh into the vm with:
+You can ssh into the vm with:
 
 ```
 vagrant ssh
