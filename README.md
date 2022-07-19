@@ -27,7 +27,7 @@ $ vagrant up
 ```
 ### Start writting ansible
 
-run ansible:
+Run ansible:
 ```
 $ ansible -i inventory -m ping myhosts
 ```
@@ -41,9 +41,34 @@ Output:
     "changed": false,
     "ping": "pong"
 }
+
+You will find a collection of playbooks in their directory ready to use them. The playbook target is defined as a variable. To match the current Vagrant host you need pass the target as follows:
+
+```
+ ansible-playbook -i inventory  addcronjob.yaml --extra-vars "target=myhosts" 
 ```
 
-You can ssh into the vm with:
+Output:
+
+```
+PLAY [myhosts] ******************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+ok: [192.168.56.10]
+
+TASK [cron] *********************************************************************************************************************************************************************************************************
+ok: [192.168.56.10]
+
+PLAY RECAP **********************************************************************************************************************************************************************************************************
+192.168.56.10              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+```
+
+ More information about targeting hosts and groups: https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html
+
+
+#### Debug
+
+Also you can ssh into the vm with:
 
 ```
 vagrant ssh
